@@ -1,10 +1,12 @@
-La función caesarCipher  pide al usuario por medio de un prompt que indique un número (1 o 2) según lo que quiera hacer, cifrar o descifrar.
-Si ingresa algo que no sea un número se iniciará un bucle while  hasta que el usuario ingrese una opción válida .
-Si el usuario escoge cifrar/decifrar,  comienza la función validateCipher/Decipher que se asegura usando expresiones regulares, de que solo se ingresen letras, minúsculas o mayúsculas. 
-Si el usuario no sigue las instrucciones y no ingresa una palabra que solo contenga letras, usando un alert se le vuelve a solicitar que ingrese una palabra.
-Si el usuario ingresa una palabra, se llama la función cipher/decipher.
-La función cipher/decipher crea un string vacio, que será la variable en la que se almacenaran los nuevos carácteres. Se inicia un bucle for que pasa por cada letra y newWord.charCodeAt(i) devuelve el unicode correspondiente al index del string.
-Por medio de un if ingresó el rango de carácteres ASCII correspondientes a las letras mayúsculas, el resultado del bucle for más String.fromCharCode que convierte un numero Unicode a una letra y la formula del Código César dan como resultado la salida para un string con letras mayúsculas.
-Luego con el rango que corresponde a las letras minúsculas se aplica la formula y el resultado corresponde a la salida de un string con letras minúsculas.
+La función caesarCipher  pide al usuario por medio de un prompt que ingrese una palabra, si el usuario ingresa números o espacios se le recordará por medio de un alert que debe ingresar una palabra, sin espacios ni números.
 
-![Diagrama de Flujo](https://i.imgur.com/dc1UFSS.jpg?raw=true)
+Este filtro se logra haciendo uso de las expresiones regulares “/^[a-zA-Z]+$/” que buscan de principio a fin en la palabra ingresada, letras de a-z y  A-Z.
+Cuándo el usuario ingrese una palabra valida, por medio de otro prompt se le preguntará qué es lo que desea hacer, cifrar o descifrar.
+
+Dependiendo de la respuesta, llamará a la función cipher o decipher, que hace uso de la formula que nos mostró Michelle en el video ((character - 65 + 33) % 26 + 65).
+Lo primero qué hace cipher/decipher es crear una variable output que almacenará los datos de salida, luego una variable index, que iterará por cada letra de la palabra ingresada.
+
+ Con charCodeAt busca el número Unicode correspondiente a cada letra, para luego aplicar la formula de cifrado/decifrado en cada una de ellas. Lo siguiente es crear una cadena a partir del número Unicode con String.fromCharCode y retornar una alerta con la respuesta del cifrado/descifrado que se almacenó en la variable output.
+Para poder cifrar/decifrar tanto letras minúsculas como mayúsculas, modifiqué un poco la formula agregando los rangos de números correspondientes en la tabla de códigos ASCII. (A=65, Z=90 ---> para mayúsculas y  a=97, z=122 ---> para minúsculas).
+
+![Diagrama de Flujo](https://i.imgur.com/KfPkJ5i.jpg)
