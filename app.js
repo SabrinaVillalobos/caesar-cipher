@@ -14,14 +14,13 @@ function caesarCipher() {
 }
 
 
-
 function cipher() {
     do {
-        word = prompt("Ingrese una palabra");
+        word = prompt("Ingrese una palabra o frase");
 
         var output = "";
 
-        if (/^[a-zA-Z]+$/.test(word)) {
+        if (/^[a-zA-Z\s]+$/.test(word)) {
             for (var i = 0; i < word.length; i++) {
                 var character = word.charCodeAt(i);
                 var caesarCiphLow = ((character - 65 + 33) % 26 + 65);
@@ -30,14 +29,15 @@ function cipher() {
                     output = output + String.fromCharCode(caesarCiphLow);
                 } else if (97 <= character && character <= 122) {
                     output = output + String.fromCharCode(caesarCiphUpp);
-                }
+                } else
+                    output = output + String.fromCharCode(character);
             }
             return prompt("Tu texto cifrado es:", output);
         } else {
-            alert("Debe ingresar una palabra, sin espacios ni números");
-
+            alert("No ingrese números por favor");
         }
-    } while (word === "" || !/^[a-zA-Z]+$/.test(word));
+    }
+    while (word === "" || !/^[a-zA-Z\s]+$/.test(word));
 }
 
 function decipher() {
@@ -46,7 +46,7 @@ function decipher() {
 
         var output = "";
 
-        if (/^[a-zA-Z]+$/.test(word)) {
+        if (/^[a-zA-Z\s]+$/.test(word)) {
             for (var i = 0; i < word.length; i++) {
                 var character = word.charCodeAt(i);
                 var caesarCiphLow = ((character - 65 - 7 + 52) % 26 + 65);
@@ -55,14 +55,15 @@ function decipher() {
                     output = output + String.fromCharCode(caesarCiphLow);
                 } else if (97 <= character && character <= 122) {
                     output = output + String.fromCharCode(caesarCiphUpp);
-                }
+                } else
+                    output = output + String.fromCharCode(character);
             }
-            return prompt("Tu texto decifrado es:", output);
+            return prompt("Tu texto cifrado es:", output);
         } else {
-            alert("Debe ingresar una palabra, sin espacios ni números");
-
+            alert("No ingrese números por favor");
         }
-    } while (word === "" || !/^[a-zA-Z]+$/.test(word));
+    }
+    while (word === "" || !/^[a-zA-Z\s]+$/.test(word));
 }
 
 caesarCipher();
