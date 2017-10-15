@@ -9,4 +9,4 @@ Lo primero qué hace cipher/decipher es crear una variable output que almacenar�
  Con charCodeAt busca el número Unicode correspondiente a cada letra, para luego aplicar la formula de cifrado/decifrado en cada una de ellas. Lo siguiente es crear una cadena a partir del número Unicode con String.fromCharCode y retornar una alerta con la respuesta del cifrado/descifrado que se almacenó en la variable output.
 Para poder cifrar/decifrar tanto letras minúsculas como mayúsculas, modifiqué un poco la formula agregando los rangos de números correspondientes en la tabla de códigos ASCII. (A=65, Z=90 ---> para mayúsculas y  a=97, z=122 ---> para minúsculas).
 
-![Diagrama de Flujo](https://i.imgur.com/KfPkJ5i.jpg)
+![Diagrama de Flujo](https://i.imgur.com/lrpNo29.jpg)
