@@ -65,5 +65,3 @@ function decipher() {
     }
     while (word === "" || !/^[a-zA-Z\s]+$/.test(word));
 }
-
-caesarCipher();
