@@ -18,16 +18,17 @@ function cipher() {
     do {
         word = prompt("Ingrese una palabra o frase");
 
-        var output = "";
+        var output = ""; //variable de salida
 
-        if (/^[a-zA-Z\s]+$/.test(word)) {
-            for (var i = 0; i < word.length; i++) {
-                var character = word.charCodeAt(i);
-                var caesarCiphLow = ((character - 65 + 33) % 26 + 65);
-                var caesarCiphUpp = ((character - 97 + 33) % 26 + 97);
-                if (character >= 65 && character <= 90) {
+        if (/^[a-zA-Z\s]+$/.test(word)) {  //expresión regular para buscar letras de la a-Z/A-Z y espacios
+            for (var i = 0; i < word.length; i++) { //bucle para ir por cada letra
+                var character = word.charCodeAt(i); // da el N° unicode de la letra
+                var caesarCiphLow = ((character - 65 + 33) % 26 + 65); //formula que dio Michelle
+                var caesarCiphUpp = ((character - 97 + 33) % 26 + 97);//modificada para mayus y minus
+                if (character >= 65 && character <= 90) { //si son mayusculas
                     output = output + String.fromCharCode(caesarCiphLow);
                 } else if (97 <= character && character <= 122) {
+                    //aplica Codigo Cesar (String.fromCharCode) devuelve una cadena a partir de n° unicode
                     output = output + String.fromCharCode(caesarCiphUpp);
                 } else
                     output = output + String.fromCharCode(character);
