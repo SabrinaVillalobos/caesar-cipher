@@ -1,0 +1,66 @@
+html { 
+  background: url(https://i.imgur.com/NiJVwWF.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+	background-color:#000000 ;
+	border: 3px groove #898C5E;
+    margin-left: 15em;
+    margin-right: 15em;
+
+}
+
+h1{ color:#F5F5F5;
+    font-family: 'Caesar Dressing';font-size: 4em;
+	text-align: center;
+	border: 1px dashed #898C5E;
+}
+
+p { margin-left: auto;
+    margin-right: auto;
+    color: #999999;
+    font-family: 'Alegreya Sans';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    text-indent: 36px;
+    max-width: 600px;}
+
+/* botón generado en http://buttonoptimizer.com */
+
+    .clickButton {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border: 1px solid #887f45;
+    border-radius: 8px;
+    background: #dfd072;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dfd072), to(#887f45));
+    background: -moz-linear-gradient(top, #dfd072, #887f45);
+    background: linear-gradient(to bottom, #dfd072, #887f45);
+    text-shadow: #615b32 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+.clickButton:hover,
+.clickButton:focus {
+    border: 1px solid #c2b563;
+    background: #fffa89;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fffa89), to(#a39853));
+    background: -moz-linear-gradient(top, #fffa89, #a39853);
+    background: linear-gradient(to bottom, #fffa89, #a39853);
+    color: #ffffff;
+    text-decoration: none;
+}
+.clickButton:active {
+    background: #887f45;
+    background: -webkit-gradient(linear, left top, left bottom, from(#887f45), to(#887f45));
+    background: -moz-linear-gradient(top, #887f45, #887f45);
+    background: linear-gradient(to bottom, #887f45, #887f45);
+}
